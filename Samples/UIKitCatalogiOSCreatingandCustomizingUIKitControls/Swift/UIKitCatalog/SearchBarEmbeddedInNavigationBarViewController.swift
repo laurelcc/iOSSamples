@@ -26,6 +26,7 @@ class SearchBarEmbeddedInNavigationBarViewController: SearchControllerBaseViewCo
         searchController = UISearchController(searchResultsController: searchResultsController)
         searchController.searchResultsUpdater = searchResultsController
         searchController.hidesNavigationBarDuringPresentation = false
+        searchController.dimsBackgroundDuringPresentation = true
         
         /*
             Configure the search controller's search bar. For more information on 

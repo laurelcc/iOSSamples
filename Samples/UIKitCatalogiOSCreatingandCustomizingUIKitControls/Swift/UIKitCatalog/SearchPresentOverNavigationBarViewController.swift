@@ -24,7 +24,7 @@ class SearchPresentOverNavigationBarViewController: SearchControllerBaseViewCont
         searchController = UISearchController(searchResultsController: searchResultsController)
         searchController.searchResultsUpdater = searchResultsController
         searchController.hidesNavigationBarDuringPresentation = false
-        searchController.dimsBackgroundDuringPresentation = false
+        searchController.dimsBackgroundDuringPresentation = true
 
         // Present the view controller.
         presentViewController(searchController, animated: true, completion: nil)
