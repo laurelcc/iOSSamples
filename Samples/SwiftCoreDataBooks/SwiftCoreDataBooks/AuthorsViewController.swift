@@ -54,12 +54,48 @@ class AuthorsViewController: UITableViewController, NSFetchedResultsControllerDe
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
+        if let sections = fetchedResultsController.sections{
+            return sections.count
+        }
+        
         return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        if let sections = self.fetchedResultsController.sections{
+            let section = sections[section]
+            
+            return section.numberOfObjects
+        }
+        
         return 0
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.fetchedResultsController.sections?[section].name
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == UITableViewCellEditingStyle.delete{
+            let context = self.fetchedResultsController.managedObjectContext
+            context.delete(self.fetchedResultsController.object(at: indexPath) as! NSManagedObject)
+            
+            if let error = try? context.save() {
+                print(error)
+            }
+            
+        }
+        
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        
+        if editing {
+            self.rightBarButtonItem = self.navigationItem.rightBarButtonItem
+        }
     }
 
     /*
