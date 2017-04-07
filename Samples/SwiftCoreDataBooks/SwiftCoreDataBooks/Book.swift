@@ -9,8 +9,8 @@
 import CoreData
 
 class Book: NSManagedObject {
-    var title:String = ""
-    var author:String = ""
-    var copyright:Date?
+    dynamic var title:String = ""
+    dynamic var author:String = ""
+    dynamic var copyright:Date? = Date()
     
 }

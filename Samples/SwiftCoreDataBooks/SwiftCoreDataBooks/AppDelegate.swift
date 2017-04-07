@@ -52,17 +52,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, NSFetchedResultsControlle
         let options:[String: Any] = [NSMigratePersistentStoresAutomaticallyOption: true,
                                      NSInferMappingModelAutomaticallyOption: true]
         let coordinator:NSPersistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel!)
-        if let error = try? coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeURL, options: options){
-            //错误处理
+        if let store = try? coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeURL, options: options){
+            //正确处理，返回NSPersistentStore路径
             
+            print(store)
+            
+            return coordinator
+        }else{
             return nil
         }
-        
-        return coordinator
     }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let navigation = self.window!.rootViewController as! UINavigationController
+        let rootViewController = navigation.viewControllers.first as! AuthorsViewController
+        rootViewController.managedObjectContext = self.managedObjectContext
+        
         return true
     }
 
