@@ -14,11 +14,6 @@ class AuthorsViewController: UITableViewController, NSFetchedResultsControllerDe
     var rightBarButtonItem:UIBarButtonItem?
     var managedObjectContext: NSManagedObjectContext!
     
-    struct AuthorViewControllerCellIdentifier {
-        static let cellIdentifier = "Cell"
-        
-    }
-    
     lazy var fetchedResultsController:NSFetchedResultsController<NSFetchRequestResult> = {
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Book")
@@ -45,15 +40,6 @@ class AuthorsViewController: UITableViewController, NSFetchedResultsControllerDe
         if let error = try? self.fetchedResultsController.performFetch(){
             print(error)
         }
-        
-        let t = UIView()
-        t.frame = CGRect(x: 100, y: 100, width: 200, height: 200)
-        t.backgroundColor = UIColor.red
-        
-        self.tableView.backgroundView = UIView()
-        self.tableView.backgroundView?.backgroundColor = UIColor.yellow
-        
-        self.tableView.backgroundView?.addSubview(t)
     }
 
     override func didReceiveMemoryWarning() {
@@ -102,7 +88,7 @@ class AuthorsViewController: UITableViewController, NSFetchedResultsControllerDe
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: AuthorViewControllerCellIdentifier.cellIdentifier)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
         
         self.configureCell(cell: cell!, indexPath: indexPath)
         
