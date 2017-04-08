@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="40f-La-hCj">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="gCT-xn-6gL">
+            <objects>
+                <navigationController id="40f-La-hCj" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rpn-PM-vDU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GEb-IS-sHg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zXa-G9-hJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-732" y="250"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PhotoViewController" customModule="PhotoFrameworkSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Upt-HT-oZ0">
+                                <rect key="frame" x="-4" y="436" width="328" height="44"/>
+                                <items>
+                                    <barButtonItem title="Photo Libray" id="mHf-2x-X8f"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9Jf-nK-s5m"/>
+                                    <barButtonItem systemItem="camera" id="cpQ-Ef-4gX"/>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cp4-BG-TGi">
+                                <rect key="frame" x="-4" y="64" width="328" height="372"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cp4-BG-TGi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="1ji-P0-wFs"/>
+                            <constraint firstItem="cp4-BG-TGi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NQD-fo-l6x"/>
+                            <constraint firstItem="Upt-HT-oZ0" firstAttribute="top" secondItem="cp4-BG-TGi" secondAttribute="bottom" id="TWT-7b-TUA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Upt-HT-oZ0" secondAttribute="bottom" id="U8A-mT-Wkt"/>
+                            <constraint firstItem="Upt-HT-oZ0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="fiF-vl-XeQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Upt-HT-oZ0" secondAttribute="trailing" constant="-20" id="mOo-IS-IwU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cp4-BG-TGi" secondAttribute="trailing" constant="-20" id="xd6-os-JyZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0eH-hs-MXx"/>
+                    <connections>
+                        <outlet property="bottomToolbar" destination="Upt-HT-oZ0" id="YTj-Hj-uU1"/>
+                        <outlet property="cameraDelayItemButton" destination="F5A-Pn-euK" id="MR0-f3-gf3"/>
+                        <outlet property="cameraDoneItemButton" destination="jBm-vh-vwf" id="mRQ-X2-aMW"/>
+                        <outlet property="cameraItemButton" destination="cpQ-Ef-4gX" id="IRh-t8-t7Q"/>
+                        <outlet property="cameraSanpItemButton" destination="4wB-JY-L7C" id="vUh-VC-yVB"/>
+                        <outlet property="cameraStartItemButton" destination="keT-3H-Hd2" id="CXk-Ew-4lH"/>
+                        <outlet property="overlayView" destination="BST-5h-uTB" id="K5U-Kx-53K"/>
+                        <outlet property="photoImageView" destination="cp4-BG-TGi" id="w16-8b-uKB"/>
+                        <outlet property="showImagesItemButton" destination="mHf-2x-X8f" id="pPF-FD-25J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="BST-5h-uTB">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jw-8j-ycK">
+                            <rect key="frame" x="0.0" y="84" width="240" height="44"/>
+                            <items>
+                                <barButtonItem title="Done" id="jBm-vh-vwf"/>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="1uV-ds-7xN"/>
+                                <barButtonItem title="Sanp" id="4wB-JY-L7C"/>
+                                <barButtonItem title="Delay" id="F5A-Pn-euK"/>
+                                <barButtonItem title="Start" id="keT-3H-Hd2"/>
+                            </items>
+                        </toolbar>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="7jw-8j-ycK" secondAttribute="bottom" id="6dQ-yx-aAh"/>
+                        <constraint firstItem="7jw-8j-ycK" firstAttribute="leading" secondItem="BST-5h-uTB" secondAttribute="leading" id="GDB-Yd-OZq"/>
+                        <constraint firstAttribute="trailing" secondItem="7jw-8j-ycK" secondAttribute="trailing" id="mec-k9-nLW"/>
+                    </constraints>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="-315" y="250"/>
+        </scene>
+    </scenes>
+</document>
