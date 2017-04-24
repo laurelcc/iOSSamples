@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "CustomPresentationController.size(forChildContentContainer : UIContentContainer, withParentContainerSize : CGSize) -&gt; CGSize:CustomPresentationController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "vc == self.presentingViewController">
+            </PersistentString>
+            <PersistentString
+               value = "container.isKind(of: CustomPresentationSecondViewController)">
+            </PersistentString>
+            <PersistentString
+               value = "(container as? UIViewController)! == self.presentedViewController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

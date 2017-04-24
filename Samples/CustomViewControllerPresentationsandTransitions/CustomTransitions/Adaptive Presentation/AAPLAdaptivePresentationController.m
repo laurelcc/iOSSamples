@@ -173,6 +173,7 @@
     // view controller's view.
     self.dismissButton.center = CGPointMake(CGRectGetMinX(self.presentedViewController.view.frame),
                                             CGRectGetMinY(self.presentedViewController.view.frame));
+
 }
 
 #pragma mark -
