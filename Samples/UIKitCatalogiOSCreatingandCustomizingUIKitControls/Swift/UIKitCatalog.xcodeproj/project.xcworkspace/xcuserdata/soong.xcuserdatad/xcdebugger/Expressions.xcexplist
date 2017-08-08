@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "AlertControllerViewController.showOkayCancelAlert(IndexPath) -&gt; ():AlertControllerViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "alertCotroller.popoverPresentationController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "specialized AlertControllerViewController.showOkayCancelActionSheet(IndexPath) -&gt; ():AlertControllerViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "AlertControllerViewController.showTextEntryAlert(IndexPath) -&gt; ():AlertControllerViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "alertController.popoverPresentationController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
