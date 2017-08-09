@@ -9,13 +9,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CustomTransitions/Custom Presentation/AAPLCustomPresentationController.m"
-            timestampString = "514720927.039233"
+            filePath = "CustomTransitions/Adaptive Presentation/AAPLAdaptivePresentationController.m"
+            timestampString = "514782791.410961"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "322"
-            endingLineNumber = "322"
-            landmarkName = "-animateTransition:"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "-sizeForChildContentContainer:withParentContainerSize:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CustomTransitions/Adaptive Presentation/AAPLAdaptivePresentationController.m"
+            timestampString = "514782883.203579"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "-frameOfPresentedViewInContainerView"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
