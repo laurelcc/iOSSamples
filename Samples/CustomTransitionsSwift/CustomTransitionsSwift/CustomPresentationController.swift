@@ -25,13 +25,12 @@ class CustomPresentationController: UIPresentationController, UIViewControllerTr
         let presentationWrapperView: UIView = UIView(frame: frameOfPresentedViewInContainerView)
         presentationWrapperView.layer.shadowOpacity = 0.44
         presentationWrapperView.layer.shadowRadius = 13
-        presentationWrapperView.layer.shadowOffset = CGSize(width: 0, height: -0.6)
+        presentationWrapperView.layer.shadowOffset = CGSize(width: 0, height: -1)
         
         self.presentationWrappingView = presentationWrapperView
         
         //圆角
         let roundedCornerView = UIView(frame: UIEdgeInsetsInsetRect(presentationWrappingView.bounds, UIEdgeInsets(top: 0, left: 10, bottom: 20, right: 10)))
-        
         roundedCornerView.autoresizingMask = UIViewAutoresizing(rawValue: UIViewAutoresizing.flexibleWidth.rawValue | UIViewAutoresizing.flexibleHeight.rawValue)
         roundedCornerView.layer.cornerRadius = 20
         roundedCornerView.layer.masksToBounds = true
@@ -98,7 +97,7 @@ class CustomPresentationController: UIPresentationController, UIViewControllerTr
         coordinator.animate(alongsideTransition: { (context) in
         }) { (context) in
             self.presentationWrappingView?.clipsToBounds = true
-            self.presentationWrappingView?.layer.shadowRadius = 0.63
+            self.presentationWrappingView?.layer.shadowOpacity = 0.63
             self.presentationWrappingView?.layer.shadowRadius = 17
         }
     }
