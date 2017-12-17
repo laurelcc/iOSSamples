@@ -13,13 +13,21 @@ class CustomPresentationController: UIPresentationController, UIViewControllerTr
     var presentationWrappingView:UIView!
     var dimmingView:UIView!
     
+    var count:Int = 0
+    
     override var presentedView: UIView?{
         return self.presentationWrappingView
+    }
+    
+    fileprivate func logCount(log: String){
+        print("The count is: \(count), Log: \(log)")
+        count = count + 1
     }
     
     // MARK: -  PresentationController Funcs
     
     override func presentationTransitionWillBegin() {
+        logCount(log: "Presentation Transition Will Begin")
         let presentedViewControllerView = super.presentedView
         
         let presentationWrapperView: UIView = UIView(frame: frameOfPresentedViewInContainerView)
@@ -29,23 +37,28 @@ class CustomPresentationController: UIPresentationController, UIViewControllerTr
         
         self.presentationWrappingView = presentationWrapperView
         
+        //当父容器的边界变动之后，自动调整宽度和高度
+        let widthHeightAutoresizing = UIViewAutoresizing(rawValue: UIViewAutoresizing.flexibleWidth.rawValue | UIViewAutoresizing.flexibleHeight.rawValue)
+        
         //圆角
         let roundedCornerView = UIView(frame: UIEdgeInsetsInsetRect(presentationWrappingView.bounds, UIEdgeInsets(top: 0, left: 10, bottom: 20, right: 10)))
-        roundedCornerView.autoresizingMask = UIViewAutoresizing(rawValue: UIViewAutoresizing.flexibleWidth.rawValue | UIViewAutoresizing.flexibleHeight.rawValue)
+        roundedCornerView.autoresizingMask = widthHeightAutoresizing
         roundedCornerView.layer.cornerRadius = 20
         roundedCornerView.layer.masksToBounds = true
         
         //presented view's wrapper
-        let presentedViewControllerWrapperView = UIView(frame: UIEdgeInsetsInsetRect(roundedCornerView.bounds, UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)))
-        presentedViewControllerWrapperView.autoresizingMask = UIViewAutoresizing(rawValue: UIViewAutoresizing.flexibleWidth.rawValue | UIViewAutoresizing.flexibleHeight.rawValue)
+//        let presentedViewControllerWrapperView = UIView(frame: UIEdgeInsetsInsetRect(roundedCornerView.bounds, UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)))
+//        presentedViewControllerWrapperView.autoresizingMask = widthHeightAutoresizing
         
-        presentedViewControllerView!.autoresizingMask = UIViewAutoresizing(rawValue: UIViewAutoresizing.flexibleWidth.rawValue | UIViewAutoresizing.flexibleHeight.rawValue)
-        presentedViewControllerView?.frame = presentedViewControllerWrapperView.bounds
-        //wrapper once
-        presentedViewControllerWrapperView.addSubview(presentedViewControllerView!)
+        //重新设定presented view controller的view大小
+        presentedViewControllerView!.autoresizingMask = widthHeightAutoresizing
+        presentedViewControllerView?.frame = roundedCornerView.bounds
+        
+        //将变更了bounds边界的presented view controller的view加入到wrapper中
+//        presentedViewControllerWrapperView.addSubview(presentedViewControllerView!)
         
         //wrapper twice
-        roundedCornerView.addSubview(presentedViewControllerWrapperView)
+        roundedCornerView.addSubview(presentedViewControllerView!)
 
         //wrapper third
         presentationWrapperView.addSubview(roundedCornerView)
@@ -53,9 +66,11 @@ class CustomPresentationController: UIPresentationController, UIViewControllerTr
         let dimmingView = UIView(frame: self.containerView!.bounds)
         dimmingView.backgroundColor = UIColor.black
         dimmingView.isOpaque = false
-        dimmingView.autoresizingMask = UIViewAutoresizing(rawValue: UIViewAutoresizing.flexibleHeight.rawValue | UIViewAutoresizing.flexibleWidth.rawValue)
+        dimmingView.autoresizingMask = widthHeightAutoresizing
         dimmingView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(CustomPresentationController.dimmingViewTapped)))
         self.dimmingView = dimmingView
+        
+        //该container view来自于presentation controller
         self.containerView?.addSubview(dimmingView)
         
         let coordinator = self.presentedViewController.transitionCoordinator
@@ -63,7 +78,6 @@ class CustomPresentationController: UIPresentationController, UIViewControllerTr
         coordinator?.animate(alongsideTransition: { (context) in
             self.dimmingView!.alpha = 0.5
         }, completion: nil)
-        
     }
     
     func dimmingViewTapped() -> Void {
@@ -71,6 +85,9 @@ class CustomPresentationController: UIPresentationController, UIViewControllerTr
     }
     
     override func dismissalTransitionWillBegin() {
+        
+        logCount(log: "Dimissal Transition Will Begin")
+        
         let coordinator = self.presentedViewController.transitionCoordinator
         coordinator?.animate(alongsideTransition: { (context) in
             self.dimmingView.alpha = 0
@@ -80,8 +97,9 @@ class CustomPresentationController: UIPresentationController, UIViewControllerTr
     override func preferredContentSizeDidChange(forChildContentContainer container: UIContentContainer) {
         super.preferredContentSizeDidChange(forChildContentContainer: container)
         
-        let vc = container as! UIViewController
+        logCount(log: "Preferred Content Size Did Change")
         
+        let vc = container as! UIViewController
         if vc == self.presentedViewController{
             self.containerView?.setNeedsLayout()
         }
@@ -89,6 +107,8 @@ class CustomPresentationController: UIPresentationController, UIViewControllerTr
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
+        
+        logCount(log: "View Will Transition")
         
         self.presentationWrappingView?.clipsToBounds = true
         self.presentationWrappingView?.layer.shadowOpacity = 0
@@ -103,9 +123,9 @@ class CustomPresentationController: UIPresentationController, UIViewControllerTr
     }
     
     override func size(forChildContentContainer container: UIContentContainer, withParentContainerSize parentSize: CGSize) -> CGSize {
+        logCount(log: "Size")
         
         let vc = container as! UIViewController
-        
         if vc == self.presentedViewController{
             return vc.preferredContentSize
         }else{
@@ -114,6 +134,8 @@ class CustomPresentationController: UIPresentationController, UIViewControllerTr
     }
     
     override var frameOfPresentedViewInContainerView: CGRect{
+        logCount(log: "Frame Of Presented View In Container View")
+        
         let containerViewBounds = self.containerView!.bounds
 
         let presentedViewContentSize = self.size(forChildContentContainer: self.presentedViewController, withParentContainerSize: containerViewBounds.size)
@@ -128,6 +150,8 @@ class CustomPresentationController: UIPresentationController, UIViewControllerTr
     override func containerViewWillLayoutSubviews() {
         super.containerViewWillLayoutSubviews()
         
+        logCount(log: "Container View Will Layout Subviews")
+        
         self.presentationWrappingView.frame = self.frameOfPresentedViewInContainerView
     }
     
@@ -135,10 +159,14 @@ class CustomPresentationController: UIPresentationController, UIViewControllerTr
     // MARK: - UIViewControllerTransitionDelegate
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        logCount(log: "Animation Controller For Dimiss")
+        
         return self
     }
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        logCount(log: "Animation Controller For Presented")
+        
         return self
     }
     
