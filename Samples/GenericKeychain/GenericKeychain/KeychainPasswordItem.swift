@@ -48,9 +48,10 @@ struct KeychainPasswordItem {
         
         // Try to fetch the existing keychain item that matches the query.
         var queryResult: AnyObject?
-        let status = withUnsafeMutablePointer(to: &queryResult) {
-            SecItemCopyMatching(query as CFDictionary, UnsafeMutablePointer($0))
-        }
+//        let status = withUnsafeMutablePointer(to: &queryResult) {
+//            SecItemCopyMatching(query as CFDictionary, UnsafeMutablePointer($0))
+//        }
+        let status = SecItemCopyMatching(query as CFDictionary, &queryResult)
         
         // Check the return status and throw an error if appropriate.
         guard status != errSecItemNotFound else { throw KeychainError.noPassword }

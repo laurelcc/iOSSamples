@@ -96,6 +96,8 @@
 				TargetAttributes = {
 					7642E54C1CC34FE0001DAC16 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 93Y9X9D7G6;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -247,10 +249,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 93Y9X9D7G6;
 				INFOPLIST_FILE = PhotoFrameworkSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = MacSong.PhotoFrameworkSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.deshengtongfeng.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "410e3142-1317-4d22-ab14-75621f5f31c6";
+				PROVISIONING_PROFILE_SPECIFIER = "sample-dev";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -259,10 +265,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PhotoFrameworkSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = MacSong.PhotoFrameworkSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.deshengtongfeng.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -286,6 +295,7 @@
 				7642E5611CC34FE0001DAC16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

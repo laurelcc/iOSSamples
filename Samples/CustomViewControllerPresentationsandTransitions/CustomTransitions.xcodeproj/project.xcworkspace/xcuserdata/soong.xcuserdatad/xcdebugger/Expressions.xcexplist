@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[AAPLExternalStoryboardSegue initWithIdentifier:source:destination:]:AAPLExternalStoryboardSegue.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "initialViewController as? UINavigationController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

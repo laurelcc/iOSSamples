@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D13D2591FE94D3800C71AC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D13D2581FE94D3800C71AC7 /* ViewController.swift */; };
 		511E66961EADC72D0067A40A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511E66951EADC72D0067A40A /* AppDelegate.swift */; };
 		511E669B1EADC72D0067A40A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511E66991EADC72D0067A40A /* Main.storyboard */; };
 		511E669D1EADC72D0067A40A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 511E669C1EADC72D0067A40A /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D13D2581FE94D3800C71AC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		511E66921EADC72D0067A40A /* CustomTransitionsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTransitionsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		511E66951EADC72D0067A40A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		511E669A1EADC72D0067A40A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				511E66A81EADC8B90067A40A /* CustomPresentationFirstViewController.swift */,
 				511E66B01EADFBD70067A40A /* CSViewController.swift */,
 				511E66AC1EADCB610067A40A /* CustomPresentationController.swift */,
+				0D13D2581FE94D3800C71AC7 /* ViewController.swift */,
 			);
 			name = "Custom Presentation";
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D13D2591FE94D3800C71AC7 /* ViewController.swift in Sources */,
 				511E66A91EADC8B90067A40A /* CustomPresentationFirstViewController.swift in Sources */,
 				511E66AD1EADCB610067A40A /* CustomPresentationController.swift in Sources */,
 				511E66B11EADFBD70067A40A /* CSViewController.swift in Sources */,
@@ -315,6 +319,7 @@
 				511E66A61EADC72D0067A40A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
