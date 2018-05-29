@@ -27,7 +27,7 @@ class SearchShowResultsInSourceViewController: SearchResultsViewController {
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         
-        // Make sure the that the search bar is visible within the navigation bar.
+//         Make sure the that the search bar is visible within the navigation bar.
         searchController.searchBar.sizeToFit()
         
         // Include the search controller's search bar within the table's header view.

@@ -79,7 +79,7 @@ class ButtonViewController: UITableViewController {
         // Set the button's title for normal state.
         let normalTitleAttributes = [
             NSForegroundColorAttributeName: UIColor.applicationBlueColor,
-            NSStrikethroughStyleAttributeName: NSUnderlineStyle.styleSingle.rawValue
+            NSStrikethroughStyleAttributeName: NSUnderlineStyle.styleSingle.rawValue,
         ] as [String : Any]
         let normalAttributedTitle = NSAttributedString(string: buttonTitle, attributes: normalTitleAttributes)
         attributedTextButton.setAttributedTitle(normalAttributedTitle, for: UIControlState())
@@ -91,6 +91,8 @@ class ButtonViewController: UITableViewController {
         ] as [String : Any]
         let highlightedAttributedTitle = NSAttributedString(string: buttonTitle, attributes: highlightedTitleAttributes)
         attributedTextButton.setAttributedTitle(highlightedAttributedTitle, for: .highlighted)
+        
+        
 
         attributedTextButton.addTarget(self, action: #selector(ButtonViewController.buttonClicked(_:)), for: .touchUpInside)
     }

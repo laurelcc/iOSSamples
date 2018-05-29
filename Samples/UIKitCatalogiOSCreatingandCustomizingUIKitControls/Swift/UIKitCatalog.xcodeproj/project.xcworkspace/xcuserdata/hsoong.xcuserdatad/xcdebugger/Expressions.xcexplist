@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "AlertControllerViewController.showOkayCancelAlert(_:):AlertControllerViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "alertCotroller.popoverPresentationController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "specialized SearchResultsViewController.updateSearchResults(for:):SearchResultsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "searchController.isActive">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

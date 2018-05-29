@@ -81,7 +81,7 @@ class AlertControllerViewController : UITableViewController {
         // Configure the alert controller's popover presentation controller if it has one.
         if let popoverPresentationController = alertCotroller.popoverPresentationController {
             // This method expects a valid cell to display from.
-            let selectedCell = tableView.cellForRow(at: IndexPath(row: 0, section: 0))!
+            let selectedCell = tableView.cellForRow(at: tableView.indexPathForSelectedRow!)!
             popoverPresentationController.sourceRect = selectedCell.frame
             popoverPresentationController.sourceView = view
             popoverPresentationController.permittedArrowDirections = .up
@@ -182,7 +182,7 @@ class AlertControllerViewController : UITableViewController {
             Stop listening for text change notifications on the text field. This
             closure will be called in the two action handlers.
         */
-        let removeTextFieldObserver: (Void) -> Void = {
+        let removeTextFieldObserver = {
             NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UITextFieldTextDidChange, object: alertController.textFields!.first)
         }
 

@@ -24,6 +24,8 @@ class CustomPresentationController: UIPresentationController, UIViewControllerTr
         count = count + 1
     }
     
+    
+    
     // MARK: -  PresentationController Funcs
     
     override func presentationTransitionWillBegin() {
@@ -36,7 +38,7 @@ class CustomPresentationController: UIPresentationController, UIViewControllerTr
         presentationWrapperView.layer.shadowOffset = CGSize(width: 0, height: -1)
         
         self.presentationWrappingView = presentationWrapperView
-        
+
         //当父容器的边界变动之后，自动调整宽度和高度
         let widthHeightAutoresizing = UIViewAutoresizing(rawValue: UIViewAutoresizing.flexibleWidth.rawValue | UIViewAutoresizing.flexibleHeight.rawValue)
         
