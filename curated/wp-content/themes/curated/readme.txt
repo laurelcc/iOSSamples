@@ -1,1 +1,0 @@
-Curated: An ultimate modern Magazine Wordpress theme. by ThemeMaha
