@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D13D2591FE94D3800C71AC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D13D2581FE94D3800C71AC7 /* ViewController.swift */; };
 		511E66961EADC72D0067A40A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511E66951EADC72D0067A40A /* AppDelegate.swift */; };
 		511E669B1EADC72D0067A40A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511E66991EADC72D0067A40A /* Main.storyboard */; };
 		511E669D1EADC72D0067A40A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 511E669C1EADC72D0067A40A /* Assets.xcassets */; };
@@ -15,10 +14,10 @@
 		511E66A91EADC8B90067A40A /* CustomPresentationFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511E66A81EADC8B90067A40A /* CustomPresentationFirstViewController.swift */; };
 		511E66AD1EADCB610067A40A /* CustomPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511E66AC1EADCB610067A40A /* CustomPresentationController.swift */; };
 		511E66B11EADFBD70067A40A /* CSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511E66B01EADFBD70067A40A /* CSViewController.swift */; };
+		A6A194CD1FE8B92B005B8798 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A194CC1FE8B92B005B8798 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0D13D2581FE94D3800C71AC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		511E66921EADC72D0067A40A /* CustomTransitionsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTransitionsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		511E66951EADC72D0067A40A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		511E669A1EADC72D0067A40A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -28,6 +27,7 @@
 		511E66A81EADC8B90067A40A /* CustomPresentationFirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentationFirstViewController.swift; sourceTree = "<group>"; };
 		511E66AC1EADCB610067A40A /* CustomPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentationController.swift; sourceTree = "<group>"; };
 		511E66B01EADFBD70067A40A /* CSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSViewController.swift; sourceTree = "<group>"; };
+		A6A194CC1FE8B92B005B8798 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +76,7 @@
 				511E66A81EADC8B90067A40A /* CustomPresentationFirstViewController.swift */,
 				511E66B01EADFBD70067A40A /* CSViewController.swift */,
 				511E66AC1EADCB610067A40A /* CustomPresentationController.swift */,
-				0D13D2581FE94D3800C71AC7 /* ViewController.swift */,
+				A6A194CC1FE8B92B005B8798 /* ViewController.swift */,
 			);
 			name = "Custom Presentation";
 			sourceTree = "<group>";
@@ -113,7 +113,13 @@
 				TargetAttributes = {
 					511E66911EADC72D0067A40A = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 93Y9X9D7G6;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -153,7 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D13D2591FE94D3800C71AC7 /* ViewController.swift in Sources */,
+				A6A194CD1FE8B92B005B8798 /* ViewController.swift in Sources */,
 				511E66A91EADC8B90067A40A /* CustomPresentationFirstViewController.swift in Sources */,
 				511E66AD1EADCB610067A40A /* CustomPresentationController.swift in Sources */,
 				511E66B11EADFBD70067A40A /* CSViewController.swift in Sources */,
@@ -280,6 +286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 93Y9X9D7G6;
 				INFOPLIST_FILE = CustomTransitionsSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.soong.apps.transition.CustomTransitionsSwift;
@@ -292,6 +299,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 93Y9X9D7G6;
 				INFOPLIST_FILE = CustomTransitionsSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.soong.apps.transition.CustomTransitionsSwift;

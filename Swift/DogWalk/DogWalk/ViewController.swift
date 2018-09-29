@@ -109,6 +109,31 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+//        let style = UITableViewCellEditingStyle(rawValue: UITableViewCellEditingStyle.delete.rawValue & UITableViewCellEditingStyle.insert.rawValue)
+//        return style!
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        guard let walkToRemove = currentDog?.walks?[indexPath.row] as? Walk, editingStyle == .delete else {
+            return
+        }
+        
+        managedContext.delete(walkToRemove)
+        
+        do {
+           try managedContext.save()
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+        } catch let error as NSError {
+            print("Saving error: \(error), description: \(error.userInfo)")
+        }
+    }
+    
+    
     
 }
 

@@ -7,18 +7,24 @@
 //
 
 import UIKit
+import UserNotifications
 
-class CSViewController: UIViewController {
+class CSViewController: UIViewController, UIViewControllerRestoration {
     
     @IBOutlet weak var slider: UISlider!
 
+    static func viewController(withRestorationIdentifierPath identifierComponents: [Any], coder: NSCoder) -> UIViewController? {
+        
+        return nil
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        
         // Do any additional setup after loading the view.
-        
-        
-        
         updatePreferredContentSizeWithTraitCollection(trait: self.traitCollection)
     }
     

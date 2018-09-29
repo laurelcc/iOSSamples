@@ -7,20 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B57843E11BDF801E00D1AE5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AC13E31BDA5A6600415BE0 /* AppDelegate.swift */; };
-		B57843E61BDF801E00D1AE5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5AC13EC1BDA5A6600415BE0 /* LaunchScreen.storyboard */; };
-		B57843E71BDF801E00D1AE5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5AC13EA1BDA5A6600415BE0 /* Assets.xcassets */; };
-		B57843E81BDF801E00D1AE5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5AC13E71BDA5A6600415BE0 /* Main.storyboard */; };
-		B57843FF1BDF8D5A00D1AE5D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B57843FE1BDF8D5600D1AE5D /* Localizable.strings */; };
 		B57844001BDF8E2D00D1AE5D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B57843F81BDF8D3900D1AE5D /* Localizable.strings */; };
 		B58E61C41BF350AA0025803E /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58E61C31BF350A90025803E /* KeychainPasswordItem.swift */; };
-		B58E61C51BF350AA0025803E /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58E61C31BF350A90025803E /* KeychainPasswordItem.swift */; };
 		B58E61C71BF366A90025803E /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58E61C61BF366A90025803E /* AccountsViewController.swift */; };
-		B58E61C81BF366A90025803E /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58E61C61BF366A90025803E /* AccountsViewController.swift */; };
 		B58E61CA1BF36B7C0025803E /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58E61C91BF36B7C0025803E /* AccountDetailsViewController.swift */; };
-		B58E61CB1BF36B7C0025803E /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58E61C91BF36B7C0025803E /* AccountDetailsViewController.swift */; };
 		B58E61CE1BF3861A0025803E /* KeychainConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58E61CD1BF3861A0025803E /* KeychainConfiguration.swift */; };
-		B58E61CF1BF3861A0025803E /* KeychainConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58E61CD1BF3861A0025803E /* KeychainConfiguration.swift */; };
 		B5AC13E41BDA5A6600415BE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AC13E31BDA5A6600415BE0 /* AppDelegate.swift */; };
 		B5AC13E91BDA5A6600415BE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5AC13E71BDA5A6600415BE0 /* Main.storyboard */; };
 		B5AC13EB1BDA5A6600415BE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5AC13EA1BDA5A6600415BE0 /* Assets.xcassets */; };
@@ -28,7 +19,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B57843EC1BDF801E00D1AE5D /* GenericKeychain2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenericKeychain2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57843F61BDF8D3900D1AE5D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = App1/Info.plist; sourceTree = "<group>"; };
 		B57843F71BDF8D3900D1AE5D /* GenericKeychain1.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = GenericKeychain1.entitlements; path = App1/GenericKeychain1.entitlements; sourceTree = "<group>"; };
 		B57843F81BDF8D3900D1AE5D /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = App1/Localizable.strings; sourceTree = "<group>"; };
@@ -48,13 +38,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B57843E41BDF801E00D1AE5D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B5AC13DD1BDA5A6600415BE0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -98,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				B5AC13E01BDA5A6600415BE0 /* GenericKeychain1.app */,
-				B57843EC1BDF801E00D1AE5D /* GenericKeychain2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,23 +105,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B57843DF1BDF801E00D1AE5D /* GenericKeychain2 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B57843E91BDF801E00D1AE5D /* Build configuration list for PBXNativeTarget "GenericKeychain2" */;
-			buildPhases = (
-				B57843E01BDF801E00D1AE5D /* Sources */,
-				B57843E41BDF801E00D1AE5D /* Frameworks */,
-				B57843E51BDF801E00D1AE5D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = GenericKeychain2;
-			productName = GenericKeychain;
-			productReference = B57843EC1BDF801E00D1AE5D /* GenericKeychain2.app */;
-			productType = "com.apple.product-type.application";
-		};
 		B5AC13DF1BDA5A6600415BE0 /* GenericKeychain1 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5AC13F21BDA5A6600415BE0 /* Build configuration list for PBXNativeTarget "GenericKeychain1" */;
@@ -167,12 +132,11 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Apple;
 				TargetAttributes = {
-					B57843DF1BDF801E00D1AE5D = {
-						LastSwiftMigration = 0800;
-					};
 					B5AC13DF1BDA5A6600415BE0 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 93Y9X9D7G6;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Keychain = {
 								enabled = 1;
@@ -195,23 +159,11 @@
 			projectRoot = "";
 			targets = (
 				B5AC13DF1BDA5A6600415BE0 /* GenericKeychain1 */,
-				B57843DF1BDF801E00D1AE5D /* GenericKeychain2 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B57843E51BDF801E00D1AE5D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B57843FF1BDF8D5A00D1AE5D /* Localizable.strings in Resources */,
-				B57843E61BDF801E00D1AE5D /* LaunchScreen.storyboard in Resources */,
-				B57843E71BDF801E00D1AE5D /* Assets.xcassets in Resources */,
-				B57843E81BDF801E00D1AE5D /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B5AC13DE1BDA5A6600415BE0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -226,18 +178,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B57843E01BDF801E00D1AE5D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B58E61CF1BF3861A0025803E /* KeychainConfiguration.swift in Sources */,
-				B57843E11BDF801E00D1AE5D /* AppDelegate.swift in Sources */,
-				B58E61C51BF350AA0025803E /* KeychainPasswordItem.swift in Sources */,
-				B58E61CB1BF36B7C0025803E /* AccountDetailsViewController.swift in Sources */,
-				B58E61C81BF366A90025803E /* AccountsViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B5AC13DC1BDA5A6600415BE0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -272,41 +212,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B57843EA1BDF801E00D1AE5D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = GenericKeychain/App2/GenericKeychain2.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = GenericKeychain/App2/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.GenericKeychain2";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		B57843EB1BDF801E00D1AE5D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = GenericKeychain/App2/GenericKeychain2.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = GenericKeychain/App2/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.GenericKeychain2";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
 		B5AC13F01BDA5A6600415BE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -394,13 +299,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = GenericKeychain/App1/GenericKeychain1.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 93Y9X9D7G6;
 				INFOPLIST_FILE = GenericKeychain/App1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.GenericKeychain1";
+				PRODUCT_BUNDLE_IDENTIFIER = com.deshengtongfeng.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "410e3142-1317-4d22-ab14-75621f5f31c6";
+				PROVISIONING_PROFILE_SPECIFIER = "sample-dev";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -409,13 +318,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = GenericKeychain/App1/GenericKeychain1.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GenericKeychain/App1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.GenericKeychain1";
+				PRODUCT_BUNDLE_IDENTIFIER = com.deshengtongfeng.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
@@ -424,15 +336,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B57843E91BDF801E00D1AE5D /* Build configuration list for PBXNativeTarget "GenericKeychain2" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B57843EA1BDF801E00D1AE5D /* Debug */,
-				B57843EB1BDF801E00D1AE5D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		B5AC13DB1BDA5A6600415BE0 /* Build configuration list for PBXProject "GenericKeychain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
