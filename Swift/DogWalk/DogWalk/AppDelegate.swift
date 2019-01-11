@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     lazy var coreDataStack: CoreDataStack = CoreDataStack(modelName: "DogWalk")
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         guard let nc = window?.rootViewController as? UINavigationController,
@@ -27,6 +27,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         vc.managedContext = coreDataStack.managedContext
         
         return true
+    }
+    
+    func sayHello(name: String) -> Void {
+//        let p: NSPredicate = NSPredicate(format: "name = %@", "k")
+//        let k: [Int] = [0, 2]
+//        let cp: NSCompoundPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [])
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

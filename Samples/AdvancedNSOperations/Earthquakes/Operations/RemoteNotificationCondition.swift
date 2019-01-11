@@ -24,13 +24,13 @@ struct RemoteNotificationCondition: OperationCondition {
     static let isMutuallyExclusive = false
     
     static func didReceiveNotificationToken(token: NSData) {
-        NSNotificationCenter.defaultCenter().postNotificationName(RemoteNotificationName, object: nil, userInfo: [
+        NotificationCenter.defaultCenter.postNotificationName(RemoteNotificationName, object: nil, userInfo: [
             "token": token
         ])
     }
     
     static func didFailToRegister(error: NSError) {
-        NSNotificationCenter.defaultCenter().postNotificationName(RemoteNotificationName, object: nil, userInfo: [
+        NotificationCenter.defaultCenter.postNotificationName(RemoteNotificationName, object: nil, userInfo: [
             "error": error
         ])
     }

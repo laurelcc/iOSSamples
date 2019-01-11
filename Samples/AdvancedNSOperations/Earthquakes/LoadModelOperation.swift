@@ -25,7 +25,7 @@ class LoadModelOperation: Operation {
         super.init()
         
         // We only want one of these going at a time.
-        addCondition(MutuallyExclusive<LoadModelOperation>())
+        addCondition(condition: MutuallyExclusive<LoadModelOperation>())
     }
     
     override func execute() {
@@ -34,9 +34,9 @@ class LoadModelOperation: Operation {
             get the Caches directory, then your entire sandbox is broken and
             there's nothing we can possibly do to fix it.
         */
-        let cachesFolder = try! NSFileManager.defaultManager().URLForDirectory(.CachesDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: true)
+        let cachesFolder = try! FileManager.default.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
         
-        let storeURL = cachesFolder.URLByAppendingPathComponent("earthquakes.sqlite")
+        let storeURL = cachesFolder.appendingPathComponent("earthquakes.sqlite")
         
         /*
             Force unwrap this model, because this would only fail if we haven't

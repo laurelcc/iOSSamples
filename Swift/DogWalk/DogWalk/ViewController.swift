@@ -93,12 +93,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         return true
     }
     
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
-//        let style = UITableViewCellEditingStyle(rawValue: UITableViewCellEditingStyle.delete.rawValue & UITableViewCellEditingStyle.insert.rawValue)
-//        return style!
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        let style = UITableViewCell.EditingStyle(rawValue: UITableViewCell.EditingStyle.delete.rawValue & UITableViewCell.EditingStyle.insert.rawValue)
+        return style!
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard let walkToRemove = currentDog?.walks?[indexPath.row] as? Walk, editingStyle == .delete else {
             return
         }
@@ -107,7 +107,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
         do {
            try managedContext.save()
-            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         } catch let error as NSError {
             print("Saving error: \(error), description: \(error.userInfo)")
         }

@@ -18,9 +18,9 @@ import Foundation
     For example, `GroupOperation` is the delegate of its own internal
     `OperationQueue` and uses it to manage dependencies.
 */
-@objc protocol OperationQueueDelegate: NSObjectProtocol {
-    optional func operationQueue(operationQueue: OperationQueue, willAddOperation operation: NSOperation)
-    optional func operationQueue(operationQueue: OperationQueue, operationDidFinish operation: NSOperation, withErrors errors: [NSError])
+@objc protocol QueueOperationQueueDelegate: NSObjectProtocol {
+    @objc func operationQueue(operationQueue: OperationQueue, willAddOperation operation: Operation)
+    @objc func operationQueue(operationQueue: OperationQueue, operationDidFinish operation: Operation, withErrors errors: [NSError])
 }
 
 /**
@@ -31,10 +31,10 @@ import Foundation
     - Extracting generated dependencies from operation conditions
     - Setting up dependencies to enforce mutual exclusivity
 */
-class OperationQueue: NSOperationQueue {
+class QueueOperationQueue: OperationQueue {
     weak var delegate: OperationQueueDelegate?
     
-    override func addOperation(operation: NSOperation) {
+    override func addOperation(operation: Operation) {
         if let op = operation as? Operation {
             // Set up a `BlockObserver` to invoke the `OperationQueueDelegate` method.
             let delegate = BlockObserver(

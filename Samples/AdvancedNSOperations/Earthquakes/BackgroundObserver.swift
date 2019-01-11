@@ -18,7 +18,7 @@ import UIKit
 class BackgroundObserver: NSObject, OperationObserver {
     // MARK: Properties
 
-    private var identifier = UIBackgroundTaskInvalid
+    private var identifier = UIBackgroundTaskIdentifier.invalid
     private var isInBackground = false
     
     override init() {

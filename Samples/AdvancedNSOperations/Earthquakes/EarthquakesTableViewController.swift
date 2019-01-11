@@ -13,9 +13,9 @@ import CloudKit
 class EarthquakesTableViewController: UITableViewController {
     // MARK: Properties
 
-    var fetchedResultsController: NSFetchedResultsController?
+    var fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>?
     
-    let operationQueue = OperationQueue()
+    let operationQueue = QueueOperationQueue()
     
     // MARK: View Controller
     

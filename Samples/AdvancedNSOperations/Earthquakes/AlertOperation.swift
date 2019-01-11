@@ -49,10 +49,10 @@ class AlertOperation: Operation {
             Doing this while other such operations are executing can lead to
             inconsistencies in UIKit. So, let's make them mutally exclusive.
         */
-        addCondition(MutuallyExclusive<UIViewController>())
+        addCondition(condition: MutuallyExclusive<UIViewController>())
     }
     
-    func addAction(title: String, style: UIAlertActionStyle = .Default, handler: AlertOperation -> Void = { _ in }) {
+    func addAction(title: String, style: UIAlertAction.Style = .Default, handler: AlertOperation -> Void = { _ in }) {
         let action = UIAlertAction(title: title, style: style) { [weak self] _ in
             if let strongSelf = self {
                 handler(strongSelf)
