@@ -11,6 +11,7 @@ import CoreData
 
 class ViewController: UIViewController {
     
+    @IBOutlet var topView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     
     var currentDog: Dog?
@@ -24,9 +25,24 @@ class ViewController: UIViewController {
         return df
     }()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let constraints = tableView.tableHeaderView?.constraints {
+            for cs in constraints {
+                print("constraint \(cs.constant)")
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let headerImageView = UIImageView(image: UIImage(named: "bing"))
+        headerImageView.contentMode = .scaleAspectFill
+        headerImageView.frame.size.height = 300
+        headerImageView.clipsToBounds = true
+        tableView.tableHeaderView = headerImageView
         
         let dogName = "Fido"
         let dogFetch:NSFetchRequest<Dog> = Dog.fetchRequest()
@@ -55,9 +71,13 @@ class ViewController: UIViewController {
         let walk: Walk = Walk(context: managedContext)
         walk.date = NSDate()
         
-        if let dog = currentDog, let walks = dog.walks?.mutableCopy() as? NSMutableOrderedSet {
-            walks.add(walk)
-            dog.walks = walks
+//        if let dog = currentDog, let walks = dog.walks?.mutableCopy() as? NSMutableOrderedSet {
+//            walks.add(walk)
+//            dog.walks = walks
+//        }
+
+        if let dog = currentDog {
+            dog.addToWalks(walk)
         }
         
         do {

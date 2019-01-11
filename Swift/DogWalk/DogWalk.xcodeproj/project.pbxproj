@@ -66,10 +66,7 @@
 		0DDD167620BC3B9800201620 /* DogWalk */ = {
 			isa = PBXGroup;
 			children = (
-				0DDD168E20BC45E500201620 /* Walk+CoreDataClass.swift */,
-				0DDD168F20BC45E500201620 /* Walk+CoreDataProperties.swift */,
-				0DDD169020BC45E500201620 /* Dog+CoreDataClass.swift */,
-				0DDD169120BC45E500201620 /* Dog+CoreDataProperties.swift */,
+				0DFC6083215F31BF00F69760 /* Model */,
 				0DDD167720BC3B9800201620 /* AppDelegate.swift */,
 				0DDD167920BC3B9800201620 /* ViewController.swift */,
 				0DDD167B20BC3B9800201620 /* Main.storyboard */,
@@ -80,6 +77,17 @@
 				0DDD168B20BC446B00201620 /* DogWalk.xcdatamodeld */,
 			);
 			path = DogWalk;
+			sourceTree = "<group>";
+		};
+		0DFC6083215F31BF00F69760 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0DDD168E20BC45E500201620 /* Walk+CoreDataClass.swift */,
+				0DDD168F20BC45E500201620 /* Walk+CoreDataProperties.swift */,
+				0DDD169020BC45E500201620 /* Dog+CoreDataClass.swift */,
+				0DDD169120BC45E500201620 /* Dog+CoreDataProperties.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,8 +313,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+<<<<<<< HEAD
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = APV83CJJ2B;
+=======
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+>>>>>>> e688139b1ebb6a21b17947c8615abf6ce0329338
 				INFOPLIST_FILE = DogWalk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -314,7 +327,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.soong.samples.DogWalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+<<<<<<< HEAD
 				SWIFT_VERSION = 4.2;
+=======
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+>>>>>>> e688139b1ebb6a21b17947c8615abf6ce0329338
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -323,8 +341,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+<<<<<<< HEAD
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = APV83CJJ2B;
+=======
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+>>>>>>> e688139b1ebb6a21b17947c8615abf6ce0329338
 				INFOPLIST_FILE = DogWalk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -332,7 +355,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.soong.samples.DogWalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+<<<<<<< HEAD
 				SWIFT_VERSION = 4.2;
+=======
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+>>>>>>> e688139b1ebb6a21b17947c8615abf6ce0329338
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
